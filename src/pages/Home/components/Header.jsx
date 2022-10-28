@@ -5,7 +5,7 @@ export const Header = () => {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://raw.githubusercontent.com/AstridCely/proyecto-trabajo-de-campo-frontend/main/src/assets/img/header-zona-gamer.png')",
+                "url('https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/header-zona-gamer.png')",
             }}
           >
             <span
