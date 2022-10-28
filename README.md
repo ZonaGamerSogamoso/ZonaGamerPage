@@ -11,7 +11,7 @@ Node version
 V18.7.0
 ```
 
-Install dependecies
+Install dependencies
 ```
 npm install
 ```
