@@ -12,7 +12,7 @@ export const NavBar = (props) => {
               to="/"
               className="text-gray-600 text-sm font-bold leading-relaxed inline-block mr-3 py-3 whitespace-nowrap uppercase"
             >
-              GamerZone
+              ZonaGamer
             </Link>
             <button
               className="cursor-pointer text-gray-600 text-xl leading-none px-3 py-1 border border-solid  rounded bg-transparent block lg:hidden outline-none focus:outline-none"
