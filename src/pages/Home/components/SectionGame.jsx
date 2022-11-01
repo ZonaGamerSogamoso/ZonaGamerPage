@@ -6,15 +6,13 @@ export const SectionGame = () => {
           <i className="fas fa-gamepad text-xl"></i>
         </div>
         <h3 className="text-3xl mb-2 font-semibold leading-normal">
-          Gran Variedad de Videojuegos
+          Regalo Exclusivo
         </h3>
         <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-          Reprehenderit commodo mollit irure cupidatat. Consectetur voluptate
-          proident dolore non ipsum Lorem mollit adipisicing.
+          Cada vez que consumas 10 horas en nuestras computadoras en cualquier tipo de servicio 
         </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-          Reprehenderit commodo mollit irure cupidatat. Consectetur voluptate
-          proident dolore non ipsum Lorem mollit adipisicing.
+          Se obsequiará una Hora Gratuita que podrá ser usada cuando desees 
         </p>
       </div>
 
@@ -38,11 +36,10 @@ export const SectionGame = () => {
               ></polygon>
             </svg>
             <h4 className="text-xl font-bold text-white">
-              Titulo/imagen de prueba
+              Zona Gamer
             </h4>
             <p className="text-md font-light mt-2 text-white">
-              Reprehenderit commodo mollit irure cupidatat. Consectetur
-              voluptate proident dolore non ipsum Lorem mollit adipisicing.
+              El mejor CiberGamer de Sogamoso Boyaca
             </p>
           </blockquote>
         </div>
