@@ -21,11 +21,7 @@ export const Header = () => {
                     Zona Gamer
                   </h1>
                   <p className="mt-4 text-lg text-gray-200">
-                    Tempor ut sit minim irure nulla. Anim occaecat id
-                    reprehenderit voluptate ut ut nisi nulla cillum ut aliqua
-                    mollit. Reprehenderit commodo mollit irure cupidatat.
-                    Consectetur voluptate proident dolore non ipsum Lorem mollit
-                    adipisicing.
+                     ofrece servicios que le facilitan a la comunidad acceder a variedad de videojuegos y realizar reservas desde cualquier lugar.
                   </p>
                 </div>
               </div>
