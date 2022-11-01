@@ -20,6 +20,9 @@ export const HeaderAbout = () => {
                     <h1 className="text-white font-semibold text-5xl">
                       Zona Gamer
                     </h1>
+                    <p className="mt-4 text-lg text-gray-200">
+                      Aquí nos conocerás un poco más de nosotros
+                    </p>
                   </div>
                 </div>
               </div>
