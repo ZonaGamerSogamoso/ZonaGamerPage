@@ -2,24 +2,29 @@ import { useState } from "react";
 
 export const SectionGame = ({ listGames }) => {
   const [pagination, setPagination] = useState(5);
+  const [page, setPage] = useState(1);
 
   const onChangePagination = (option) => {
-    if (pagination + 6 > listGames.games.length && option === "right") {
+    if (pagination + 6 > listGames.games.length - 1 && option === "right") {
       setPagination(5);
+      setPage(1);
       return;
     }
 
     if (pagination - 6 < 5 && option === "left") {
       setPagination(listGames.games.length - 1);
+      setPage(Math.trunc(listGames.games.length / 6));
       return;
     }
     console.log(listGames.games.length);
     if (option === "right") {
       setPagination(pagination + 6);
+      setPage(page + 1);
     }
 
     if (option === "left") {
       setPagination(pagination - 6);
+      setPage(page - 1);
     }
   };
 
@@ -43,7 +48,12 @@ export const SectionGame = ({ listGames }) => {
               {listGames.games[id].short_description}
             </p>
             <div class="flex items-center flex-wrap ">
-              <button class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
+              <button
+                class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg"
+                onClick={() => {
+                  window.open(listGames.games[id].game_url, "_blank");
+                }}
+              >
                 Ver mas
               </button>
             </div>
@@ -54,7 +64,6 @@ export const SectionGame = ({ listGames }) => {
   };
 
   if (listGames.isloading) return;
-  console.log(listGames.games);
   return (
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-15 mx-auto">
@@ -63,42 +72,29 @@ export const SectionGame = ({ listGames }) => {
         </h1>
         <div class="flex flex-wrap -m-4">
           {getGame(pagination)}
-          {getGame(pagination-1)}
-          {getGame(pagination-2)}
-          {getGame(pagination-3)}
-          {getGame(pagination-4)}
-          {getGame(pagination-5)}
+          {getGame(pagination - 1)}
+          {getGame(pagination - 2)}
+          {getGame(pagination - 3)}
+          {getGame(pagination - 4)}
+          {getGame(pagination - 5)}
         </div>
-        <div>
-          <div
-            class="button w-16 h-16 bg-blue-500 rounded-full cursor-pointer select-none
-            active:translate-y-2  active:[box-shadow:0_0px_0_0_#1b6ff8,0_0px_0_0_#1b70f841]
-            active:border-b-[0px]
-            transition-all duration-150 [box-shadow:0_8px_0_0_#1b6ff8,0_13px_0_0_#1b70f841]
-            border-[1px] border-blue-400
-             "
-          >
-            <span
-              class="flex flex-col justify-center items-center h-full text-white font-bold text-lg"
+        <div class="flex items-center justify-center my-4">
+          <div class="flex justify-center items-center ">
+            <div
+              class="border rounded-md bg-gray-100 px-2 py-1 text-3xl leading-6 text-slate-400 transition hover:bg-gray-200 hover:text-slate-500 cursor-pointer shadow-sm"
               onClick={() => onChangePagination("left")}
             >
               &#60;
-            </span>
-          </div>
-          <div
-            class="button w-16 h-16 bg-blue-500 rounded-full cursor-pointer select-none
-            active:translate-y-2  active:[box-shadow:0_0px_0_0_#1b6ff8,0_0px_0_0_#1b70f841]
-            active:border-b-[0px]
-            transition-all duration-150 [box-shadow:0_8px_0_0_#1b6ff8,0_13px_0_0_#1b70f841]
-            border-[1px] border-blue-400
-            "
-          >
-            <span
-              class="flex flex-col justify-center items-center h-full text-white font-bold text-lg"
+            </div>
+            <div class="text-slate-500">
+              {page} / {Math.trunc(listGames.games.length / 6)}
+            </div>
+            <div
+              class="border rounded-md bg-gray-100 px-2 py-1 text-3xl leading-6 text-slate-400 transition hover:bg-gray-200 hover:text-slate-500 cursor-pointer shadow-sm"
               onClick={() => onChangePagination("right")}
             >
               &#62;
-            </span>
+            </div>
           </div>
         </div>
       </div>
