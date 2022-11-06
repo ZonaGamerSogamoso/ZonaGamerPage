@@ -23,6 +23,36 @@ export const SectionGame = ({ listGames }) => {
     }
   };
 
+  const getGame = (id) => {
+    return (
+      <div class="p-4 md:w-1/3">
+        <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+          <img
+            class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
+            src={listGames.games[id].thumbnail}
+            alt={listGames.games[id].title}
+          />
+          <div class="p-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+              {listGames.games[id].genre}
+            </h2>
+            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
+              {listGames.games[id].title}
+            </h1>
+            <p class="leading-relaxed mb-3 h-32 overflow-hidden">
+              {listGames.games[id].short_description}
+            </p>
+            <div class="flex items-center flex-wrap ">
+              <button class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
+                Ver mas
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   if (listGames.isloading) return;
   console.log(listGames.games);
   return (
@@ -32,156 +62,12 @@ export const SectionGame = ({ listGames }) => {
           Videojuegos
         </h1>
         <div class="flex flex-wrap -m-4">
-          <div class="p-4 md:w-1/3">
-            <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-              <img
-                class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                src={listGames.games[pagination].thumbnail}
-                alt={listGames.games[pagination].title}
-              />
-              <div class="p-6">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  {listGames.games[pagination].genre}
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                  {listGames.games[pagination].title}
-                </h1>
-                <p class="leading-relaxed mb-3 h-32 overflow-hidden">
-                  {listGames.games[pagination].short_description}
-                </p>
-                <div class="flex items-center flex-wrap ">
-                  <button class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
-                    Learn more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/3">
-            <div class="h-full rounded-xl shadow-cla-violate bg-gradient-to-r from-pink-50 to-red-50 overflow-hidden">
-              <img
-                class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                src={listGames.games[pagination - 1].thumbnail}
-                alt={listGames.games[pagination - 1].title}
-              />
-              <div class="p-6">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  {listGames.games[pagination - 1].genre}
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                  {listGames.games[pagination - 1].title}
-                </h1>
-                <p class="leading-relaxed mb-3 h-32 overflow-hidden">
-                  {listGames.games[pagination - 1].short_description}
-                </p>
-                <div class="flex items-center flex-wrap ">
-                  <button class="bg-gradient-to-r from-orange-300 to-amber-400 hover:scale-105 drop-shadow-md shadow-cla-violate px-4 py-1 rounded-lg">
-                    Learn more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/3">
-            <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-              <img
-                class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                src={listGames.games[pagination - 2].thumbnail}
-                alt={listGames.games[pagination - 2].title}
-              />
-              <div class="p-6">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  {listGames.games[pagination - 2].genre}
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                  {listGames.games[pagination - 2].title}
-                </h1>
-                <p class="leading-relaxed mb-3 h-32 overflow-hidden">
-                  {listGames.games[pagination - 2].short_description}
-                </p>
-                <div class="flex items-center flex-wrap ">
-                  <button class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
-                    Learn more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/3">
-            <div class="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-              <img
-                class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                src={listGames.games[pagination - 3].thumbnail}
-                alt={listGames.games[pagination - 3].title}
-              />
-              <div class="p-6">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  {listGames.games[pagination - 3].genre}
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                  {listGames.games[pagination - 3].title}
-                </h1>
-                <p class="leading-relaxed mb-3 h-32 overflow-hidden">
-                  {listGames.games[pagination - 3].short_description}
-                </p>
-                <div class="flex items-center flex-wrap ">
-                  <button class="bg-gradient-to-r from-fuchsia-300 to-pink-400 hover:scale-105  shadow-cla-blue px-4 py-1 rounded-lg">
-                    Learn more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/3">
-            <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-              <img
-                class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                src={listGames.games[pagination - 4].thumbnail}
-                alt={listGames.games[pagination - 4].title}
-              />
-              <div class="p-6">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  {listGames.games[pagination - 4].genre}
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                  {listGames.games[pagination - 4].title}
-                </h1>
-                <p class="leading-relaxed mb-3 h-32 overflow-hidden">
-                  {listGames.games[pagination - 4].short_description}
-                </p>
-                <div class="flex items-center flex-wrap ">
-                  <button class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
-                    Learn more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/3">
-            <div class="h-full rounded-xl shadow-cla-violate bg-gradient-to-r from-pink-50 to-red-50 overflow-hidden">
-              <img
-                class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                src={listGames.games[pagination - 5].thumbnail}
-                alt={listGames.games[pagination - 5].title}
-              />
-              <div class="p-6">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  {listGames.games[pagination - 5].genre}
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                  {listGames.games[pagination - 5].title}
-                </h1>
-                <p class="leading-relaxed mb-3 h-32 overflow-hidden">
-                  {listGames.games[pagination - 5].short_description}
-                </p>
-                <div class="flex items-center flex-wrap ">
-                  <button class="bg-gradient-to-r from-orange-300 to-amber-400 hover:scale-105 drop-shadow-md shadow-cla-violate px-4 py-1 rounded-lg">
-                    Learn more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {getGame(pagination)}
+          {getGame(pagination-1)}
+          {getGame(pagination-2)}
+          {getGame(pagination-3)}
+          {getGame(pagination-4)}
+          {getGame(pagination-5)}
         </div>
         <div>
           <div
