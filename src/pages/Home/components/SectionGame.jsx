@@ -65,8 +65,8 @@ export const SectionGame = ({ listGames }) => {
 
   if (listGames.isloading) return;
   return (
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-15 mx-auto">
+    <section class="text-gray-600 body-font bg-gray-300/30">
+      <div class="container px-5 py-7 mx-auto">
         <h1 class="text-[30px] lg:text-[25px] xl:text-[30px] font-bold leading-tight mt-5 text-center pb-10 sm:mt-0 underline">
           Videojuegos
         </h1>

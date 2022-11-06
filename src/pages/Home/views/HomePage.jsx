@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { SectionGame } from "../components/SectionGame";
 import { options } from "../../../api/mmoApi";
 import axios from "axios";
+import SectionNews from "../components/SectionNews";
 
 export const HomePage = () => {
+
   const [listGames, setListGames] = useState({
     isloading: true,
     games: [],
@@ -13,7 +15,7 @@ export const HomePage = () => {
 
   const getGames = () => {
     axios
-      .request(options)
+      .request(options('games'))
       .then(function (response) {
         setListGames({
           isloading: false,
@@ -37,6 +39,7 @@ export const HomePage = () => {
           <div className="container mx-auto px-4 lg:px-20">
             <SectionCards />
             <SectionGame listGames={listGames}/>
+            <SectionNews />
           </div>
         </section>
       </main>
