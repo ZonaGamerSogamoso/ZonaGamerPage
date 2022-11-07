@@ -9,16 +9,24 @@ import SectionNews from "../components/SectionNews";
 export const HomePage = () => {
 
   const [listGames, setListGames] = useState({
-    isloading: true,
+    isLoading: true,
     games: [],
   });
+  const [listNews, setListNews] = useState({
+    isLoading: true,
+    news:[],
+  })
+  const [listGiveaways, setListGiveaways] = useState({
+    isLoading: true,
+    giveaways:[],
+  })
 
   const getGames = () => {
     axios
       .request(options('games'))
       .then(function (response) {
         setListGames({
-          isloading: false,
+          isLoading: false,
           games: response.data,
         });
       })
@@ -27,8 +35,37 @@ export const HomePage = () => {
       });
   };
 
+  const getNews = () =>{
+    axios
+      .request(options('latestnews'))
+      .then(function (response) {
+        setListNews({
+          isLoading: false,
+          news: response.data,
+        });
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
+
+  const getGiveaways = () =>{
+    axios
+      .request(options('giveaways'))
+      .then(function (response) {
+        setListGiveaways({
+          isLoading: false,
+          giveaways: response.data,
+        });
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
   useEffect(() => {
     getGames();
+    getNews();
+    getGiveaways();
   }, []);
 
   return (
@@ -39,7 +76,7 @@ export const HomePage = () => {
           <div className="container mx-auto px-4 lg:px-20">
             <SectionCards />
             <SectionGame listGames={listGames}/>
-            <SectionNews />
+            <SectionNews listNews={listNews} listGiveaways={listGiveaways}/>
           </div>
         </section>
       </main>

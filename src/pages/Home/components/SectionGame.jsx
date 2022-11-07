@@ -63,7 +63,7 @@ export const SectionGame = ({ listGames }) => {
     );
   };
 
-  if (listGames.isloading) return;
+  if (listGames.isLoading) return;
   return (
     <section class="text-gray-600 body-font bg-gray-300/30">
       <div class="container px-5 py-7 mx-auto">
