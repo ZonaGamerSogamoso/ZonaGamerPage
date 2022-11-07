@@ -5,8 +5,7 @@ const SectionNews = ({ listNews, listGiveaways }) => {
   const [page, setPage] = useState(1);
 
   if (listNews.isLoading) return;
-
-  console.log(listNews);
+  if (listGiveaways.isLoading) return;
 
   const onChangePagination = (option) => {
     if (pagination + 6 > listNews.news.length - 1 && option === "right") {
@@ -32,7 +31,6 @@ const SectionNews = ({ listNews, listGiveaways }) => {
     }
   };
 
-  console.log(listGiveaways.giveaways);
 
   const getGiveaway = (id) => {
     return (
@@ -107,7 +105,7 @@ const SectionNews = ({ listNews, listGiveaways }) => {
   return (
     <div className="flex mb-4">
       <div className="w-3/4 bg-gray-300 flex flex-wrap text-gray-600">
-        <h1 className="text-[30px] lg:text-[25px] xl:text-[30px] font-bold leading-tight mt-5 text-center py-5 sm:mt-0 underline w-full">
+        <h1 className="text-[30px] lg:text-[25px] xl:text-[30px] font-bold leading-tight mt-15 text-center py-5 sm:mt-0 underline w-full">
           Noticias
         </h1>
         {getNew(pagination)}
