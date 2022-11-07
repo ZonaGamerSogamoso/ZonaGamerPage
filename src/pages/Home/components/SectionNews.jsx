@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SectionNews = ({ listNews }) => {
+const SectionNews = ({ listNews, listGiveaways }) => {
   const [pagination, setPagination] = useState(5);
   const [page, setPage] = useState(1);
 
@@ -30,6 +30,41 @@ const SectionNews = ({ listNews }) => {
       setPagination(pagination - 6);
       setPage(page - 1);
     }
+  };
+
+  console.log(listGiveaways.giveaways);
+
+  const getGiveaway = (id) => {
+    return (
+      <div class="p-1 md:w-full h-1/3">
+        <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+          <img
+            class="lg:h-30 md:h-30 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-105 cursor-pointer"
+            onClick={() => {
+                window.open(listGiveaways.giveaways[id].giveaway_url, "_blank");
+              }}
+            src={listGiveaways.giveaways[id].main_image}
+            alt={listGiveaways.giveaways[id].title}
+          />
+          <div class="p-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+              <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
+                Regalo
+              </span>
+            </h2>
+            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
+              {listGiveaways.giveaways[id].title}
+            </h1>
+            <p class="leading-relaxed mb-3 h-28 overflow-hidden">
+              {listGiveaways.giveaways[id].short_description}
+            </p>
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+            {listGiveaways.giveaways[id].keys_left}
+            </h2>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   const getNew = (id) => {
@@ -102,66 +137,9 @@ const SectionNews = ({ listNews }) => {
         </div>
       </div>
       <div class="w-1/4 bg-gray-400/10">
-        <div class="p-1 md:w-full h-1/3">
-          <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-            <img
-              class="lg:h-40 md:h-30 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-              src="https://images.unsplash.com/photo-1624628639856-100bf817fd35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8M2QlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
-              alt="hola"
-            />
-            <div class="p-6">
-              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                genre
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                title
-              </h1>
-              <p class="leading-relaxed mb-3 h-28 overflow-hidden">
-                description
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="p-1 md:w-full h-1/3">
-          <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-            <img
-              class="lg:h-40 md:h-30 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-              src="https://images.unsplash.com/photo-1624628639856-100bf817fd35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8M2QlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
-              alt="hola"
-            />
-            <div class="p-6">
-              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                genre
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                title
-              </h1>
-              <p class="leading-relaxed mb-3 h-28 overflow-hidden">
-                description
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="p-1 md:w-full h-1/3">
-          <div class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-            <img
-              class="lg:h-40 md:h-30 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-              src="https://images.unsplash.com/photo-1624628639856-100bf817fd35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8M2QlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
-              alt="hola"
-            />
-            <div class="p-6">
-              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                genre
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                title
-              </h1>
-              <p class="leading-relaxed mb-3 h-28 overflow-hidden">
-                description
-              </p>
-            </div>
-          </div>
-        </div>
+        {getGiveaway(0)}
+        {getGiveaway(1)}
+        {getGiveaway(2)}
       </div>
     </div>
   );
