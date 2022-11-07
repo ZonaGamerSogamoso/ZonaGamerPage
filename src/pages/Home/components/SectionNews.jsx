@@ -5,8 +5,7 @@ const SectionNews = ({ listNews, listGiveaways }) => {
   const [page, setPage] = useState(1);
 
   if (listNews.isLoading) return;
-
-  console.log(listNews);
+  if (listGiveaways.isLoading) return;
 
   const onChangePagination = (option) => {
     if (pagination + 6 > listNews.news.length - 1 && option === "right") {
@@ -32,7 +31,6 @@ const SectionNews = ({ listNews, listGiveaways }) => {
     }
   };
 
-  console.log(listGiveaways.giveaways);
 
   const getGiveaway = (id) => {
     return (
