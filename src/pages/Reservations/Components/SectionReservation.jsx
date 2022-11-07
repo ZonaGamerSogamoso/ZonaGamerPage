@@ -102,7 +102,7 @@ export const SectionReservation = () => {
                   type="submit"
                   class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
                 >
-                  Send Message
+                  Enviar
                 </button>
               </div>
               <p class="text-base text-center text-gray-400" id="result"></p>
