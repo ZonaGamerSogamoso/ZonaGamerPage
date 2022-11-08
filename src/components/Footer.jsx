@@ -15,7 +15,10 @@ export const Footer = (props) => {
                             <li class="mb-4">
                                 <a href="https://spring.io/" class="hover:underline">SpringBoot</a>
                             </li>
-                            <li>
+                            <li class="mb-4">
+                                <a href="https://es.reactjs.org/" class="hover:underline">React</a>
+                            </li>
+                            <li class="mb-4">
                                 <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
                             </li>
                          </ul>
