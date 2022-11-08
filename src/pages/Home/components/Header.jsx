@@ -19,7 +19,7 @@ export const Header = () => {
             <div className="pr-12">
               <h1 className="text-white font-semibold text-5xl">Zona Gamer</h1>
               <p className="mt-4 text-lg text-gray-200">
-                ofrece servicios que le facilitan a la comunidad acceder a
+                Ofrece servicios que le facilitan a la comunidad gamer acceder a
                 variedad de videojuegos y realizar reservas desde cualquier
                 lugar.
               </p>
