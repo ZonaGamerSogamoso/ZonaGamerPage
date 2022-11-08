@@ -84,18 +84,23 @@ export const NavBar = (props) => {
               </li> */}
 
               <li className="flex items-center">
-                <button
-                  className="bg-red-400 text-white active:bg-red-600 text-xs font-bold uppercase px-5 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
-                  type="button"
-                >
-                  <i className="fas fa-user"></i> Login
-                </button>
-                <button
-                  className="bg-red-400 text-white active:bg-red-600 text-xs font-bold uppercase px-5 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-1 mb-3 ease-linear transition-all duration-150"
-                  type="button"
-                >
-                  <i className="fas fa-user"></i> Register
-                </button>
+
+                <NavLink to="/login">
+                  <button
+                    className="bg-red-400 text-white active:bg-red-600 text-xs font-bold uppercase px-5 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+                    type="button"
+                  >
+                    <i className="fas fa-user"></i> Login
+                  </button>
+                </NavLink>
+                <NavLink to="/register">
+                  <button
+                    className="bg-red-400 text-white active:bg-red-600 text-xs font-bold uppercase px-5 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-1 mb-3 ease-linear transition-all duration-150"
+                    type="button"
+                  >
+                    <i className="fas fa-user"></i> Register
+                  </button>
+                </NavLink>
               </li>
             </ul>
           </div>

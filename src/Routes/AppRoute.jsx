@@ -4,6 +4,8 @@ import { AboutRoutes } from "../pages/About/routes/AboutRoutes";
 import { HomeRoutes } from "../pages/Home/routes/HomeRoutes";
 import { ReservationsRoutes } from "../pages/Reservations/routes/ReservationsRoutes";
 import { ServiceRoutes } from "../pages/Service/routes/ServiceRoutes";
+import { AuthenticationRoutes } from "../pages/Authentication/routes/AuthenticationRoutes";
+import { RegisterRoutes } from "../pages/Authentication/routes/RegisterRoutes";
 
 export const AppRoute = () => {
   return (
@@ -17,8 +19,8 @@ export const AppRoute = () => {
         <Route path="/service/*" element={<ServiceRoutes />} />
 
         {/* Auth Section */}
-        {/* <Route path="/login" element={<LoginPage />}/>
-        <Route path="/register" element={<RegisterPage />}/> */}
+        <Route path="/login/*" element={<AuthenticationRoutes />}/>
+        <Route path="/register/*" element={<RegisterRoutes />}/>
       </Routes>
     </>
   );
