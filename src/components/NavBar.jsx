@@ -14,7 +14,9 @@ export const NavBar = (props) => {
             >
               <img className="h-10 w-20"
                 src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/icon.jpeg" />
+                <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
               ZonaGamer
+              </h1>
             </Link>
             <button
               className="cursor-pointer text-gray-600 text-xl leading-none px-3 py-1 border border-solid  rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -39,7 +41,9 @@ export const NavBar = (props) => {
                     navData.isActive ? "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold underline" : "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                 >
+                  <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
                   Inicio
+                  </h1>
                 </NavLink>
               </li>
               <li className="flex items-center">
@@ -49,7 +53,9 @@ export const NavBar = (props) => {
                     navData.isActive ? "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold underline" : "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                 >
+                  <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
                   Servicios
+                  </h1>
                 </NavLink>
               </li>
               <li className="flex items-center">
@@ -59,7 +65,9 @@ export const NavBar = (props) => {
                     navData.isActive ? "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold underline" : "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                 >
+                  <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
                   Reservas
+                  </h1>
                 </NavLink>
               </li>
               <li className="flex items-center">
@@ -69,7 +77,9 @@ export const NavBar = (props) => {
                     navData.isActive ? "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold underline" : "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                 >
+                  <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
                   Quienes somos
+                  </h1>
                 </NavLink>
               </li>
               <li className="flex items-center">
@@ -79,7 +89,9 @@ export const NavBar = (props) => {
                     navData.isActive ? "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold underline" : "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                 >
+                  <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
                   Tienda de regalos
+                  </h1>
                 </NavLink>
               </li>
             </ul>
@@ -102,7 +114,7 @@ export const NavBar = (props) => {
                     className="bg-red-400 text-white active:bg-red-600 text-xs font-bold uppercase px-5 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                     type="button"
                   >
-                    <i className="fas fa-user"></i> Login
+                    <i className="fas fa-user"></i> Inicio de Sesión
                   </button>
                 </NavLink>
                 <NavLink to="/register">
@@ -110,7 +122,7 @@ export const NavBar = (props) => {
                     className="bg-red-400 text-white active:bg-red-600 text-xs font-bold uppercase px-5 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-1 mb-3 ease-linear transition-all duration-150"
                     type="button"
                   >
-                    <i className="fas fa-user"></i> Register
+                    <i className="fas fa-user"></i> Registrarse
                   </button>
                 </NavLink>
               </li>
