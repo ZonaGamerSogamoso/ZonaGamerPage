@@ -21,7 +21,7 @@ export const HeaderStore = () => {
                       Zona Gamer
                     </h1>
                     <p className="mt-4 text-lg text-gray-200">
-                      Estos son nuestros servicios
+                      En nuestra tienda de regalos encontraras diferentes items diseñados para ti
                     </p>
                   </div>
                 </div>
