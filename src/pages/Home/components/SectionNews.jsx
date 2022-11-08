@@ -1,46 +1,45 @@
 import { useState } from "react";
 
 const SectionNews = ({ listNews, listGiveaways }) => {
-  const [pagination, setPagination] = useState(5);
+  const [pagination, setPagination] = useState(11);
   const [page, setPage] = useState(1);
 
   if (listNews.isLoading) return;
   if (listGiveaways.isLoading) return;
 
   const onChangePagination = (option) => {
-    if (pagination + 6 > listNews.news.length - 1 && option === "right") {
-      setPagination(5);
+    if (pagination + 12 > listNews.news.length - 1 && option === "right") {
+      setPagination(12);
       setPage(1);
       return;
     }
 
-    if (pagination - 6 < 5 && option === "left") {
+    if (pagination - 12 < 11 && option === "left") {
       setPagination(listNews.news.length - 1);
-      setPage(Math.trunc(listNews.news.length / 6));
+      setPage(Math.trunc(listNews.news.length / 12));
       return;
     }
     console.log(listNews.news.length);
     if (option === "right") {
-      setPagination(pagination + 6);
+      setPagination(pagination + 12);
       setPage(page + 1);
     }
 
     if (option === "left") {
-      setPagination(pagination - 6);
+      setPagination(pagination - 12);
       setPage(page - 1);
     }
   };
 
-
   const getGiveaway = (id) => {
     return (
-      <div className="p-1 md:w-full h-1/3">
+      <div className="p-1 md:w-full sm:w-1/2 h-1/5">
         <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
           <img
             className="lg:h-30 md:h-30 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-105 cursor-pointer"
             onClick={() => {
-                window.open(listGiveaways.giveaways[id].giveaway_url, "_blank");
-              }}
+              window.open(listGiveaways.giveaways[id].giveaway_url, "_blank");
+            }}
             src={listGiveaways.giveaways[id].main_image}
             alt={listGiveaways.giveaways[id].title}
           />
@@ -57,7 +56,7 @@ const SectionNews = ({ listNews, listGiveaways }) => {
               {listGiveaways.giveaways[id].short_description}
             </p>
             <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-            {listGiveaways.giveaways[id].keys_left}
+              {listGiveaways.giveaways[id].keys_left}
             </h2>
           </div>
         </div>
@@ -67,7 +66,7 @@ const SectionNews = ({ listNews, listGiveaways }) => {
 
   const getNew = (id) => {
     return (
-      <div className="p-4 md:w-1/3">
+      <div className="p-4 lg:w-1/3 md:w-1/2 sm:w-1/2">
         <div className="h-full rounded-xl shadow-cla-violate bg-gradient-to-r from-pink-50 to-red-50 overflow-hidden">
           <img
             className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
@@ -103,8 +102,8 @@ const SectionNews = ({ listNews, listGiveaways }) => {
   };
 
   return (
-    <div className="flex mb-4">
-      <div className="w-3/4 bg-gray-300 flex flex-wrap text-gray-600">
+    <div className="md:flex sm:block  mb-4">
+      <div className="md:w-3/4 sm:w-fullbg-gray-300 flex flex-wrap text-gray-600">
         <h1 className="text-[30px] lg:text-[25px] xl:text-[30px] font-bold leading-tight mt-15 text-center py-5 sm:mt-0 underline w-full">
           Noticias
         </h1>
@@ -114,6 +113,12 @@ const SectionNews = ({ listNews, listGiveaways }) => {
         {getNew(pagination - 3)}
         {getNew(pagination - 4)}
         {getNew(pagination - 5)}
+        {getNew(pagination - 6)}
+        {getNew(pagination - 7)}
+        {getNew(pagination - 8)}
+        {getNew(pagination - 9)}
+        {getNew(pagination - 10)}
+        {getNew(pagination - 11)}
         <div className="flex items-center justify-center my-4 w-full">
           <div className="flex justify-center items-center ">
             <div
@@ -123,7 +128,7 @@ const SectionNews = ({ listNews, listGiveaways }) => {
               &#60;
             </div>
             <div className="text-slate-500">
-              {page} / {Math.trunc(listNews.news.length / 6)}
+              {page} / {Math.trunc(listNews.news.length / 12)}
             </div>
             <div
               className="border rounded-md bg-gray-100 px-2 py-1 text-3xl leading-6 text-slate-400 transition hover:bg-gray-200 hover:text-slate-500 cursor-pointer shadow-sm"
@@ -134,10 +139,12 @@ const SectionNews = ({ listNews, listGiveaways }) => {
           </div>
         </div>
       </div>
-      <div className="w-1/4 bg-gray-400/10">
+      <div className="md:w-1/4 sm:w-full flex flex-wrap bg-gray-400/10">
         {getGiveaway(0)}
         {getGiveaway(1)}
         {getGiveaway(2)}
+        {getGiveaway(3)}
+        {getGiveaway(4)}
       </div>
     </div>
   );
