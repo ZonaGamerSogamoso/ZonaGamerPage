@@ -104,7 +104,7 @@ export const SectionStore = () => {
                         Bolsas de regalo sorpresa
                         </h1>
                         <p className="leading-relaxed overflow-hidden">
-                        Ven y encuentra bolsas de regalo con objetos sorpresa que serán de gran agrado para todas y todos
+                        Ven y encuentra bolsas de regalo con objetos sorpresa que serán de gran agrado para todas y todos.
                         </p>
                     </div>
                 </div>
