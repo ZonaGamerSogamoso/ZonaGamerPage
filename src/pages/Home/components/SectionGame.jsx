@@ -1,49 +1,103 @@
-export const SectionGame = () => {
-  return (
-    <div className="flex flex-wrap items-center mt-32">
-      <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-          <i className="fas fa-gamepad text-xl"></i>
-        </div>
-        <h3 className="text-3xl mb-2 font-semibold leading-normal">
-          Regalo Exclusivo
-        </h3>
-        <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-          Cada vez que consumas 10 horas en nuestras computadoras en cualquier tipo de servicio 
-        </p>
-        <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-          Se obsequiará una Hora Gratuita que podrá ser usada cuando desees 
-        </p>
-      </div>
+import { useState } from "react";
 
-      <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-        <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-red-400">
+export const SectionGame = ({ listGames }) => {
+  const [pagination, setPagination] = useState(5);
+  const [page, setPage] = useState(1);
+
+  const onChangePagination = (option) => {
+    if (pagination + 6 > listGames.games.length - 1 && option === "right") {
+      setPagination(5);
+      setPage(1);
+      return;
+    }
+
+    if (pagination - 6 < 5 && option === "left") {
+      setPagination(listGames.games.length - 1);
+      setPage(Math.trunc(listGames.games.length / 6));
+      return;
+    }
+    console.log(listGames.games.length);
+    if (option === "right") {
+      setPagination(pagination + 6);
+      setPage(page + 1);
+    }
+
+    if (option === "left") {
+      setPagination(pagination - 6);
+      setPage(page - 1);
+    }
+  };
+
+  const getGame = (id) => {
+    return (
+      <div className="p-4 md:w-1/3 sm:w-1/2">
+        <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
           <img
-            alt="zona-gamer"
-            src="https://raw.githubusercontent.com/AstridCely/proyecto-trabajo-de-campo-frontend/main/src/assets/img/card-image.png"
-            className="w-full align-middle rounded-t-lg"
+            className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
+            src={listGames.games[id].thumbnail}
+            alt={listGames.games[id].title}
           />
-          <blockquote className="relative p-8 mb-4">
-            <svg
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 583 95"
-              className="absolute left-0 w-full block h-95-px -top-94-px"
-            >
-              <polygon
-                points="-30,95 583,95 583,65"
-                className="text-red-400 fill-current"
-              ></polygon>
-            </svg>
-            <h4 className="text-xl font-bold text-white">
-              Zona Gamer
-            </h4>
-            <p className="text-md font-light mt-2 text-white">
-              El mejor CiberGamer de Sogamoso Boyaca
+          <div className="p-6">
+            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+              {listGames.games[id].genre}
+            </h2>
+            <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+              {listGames.games[id].title}
+            </h1>
+            <p className="leading-relaxed mb-3 h-32 overflow-hidden">
+              {listGames.games[id].short_description}
             </p>
-          </blockquote>
+            <div className="flex items-center flex-wrap ">
+              <button
+                className="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg"
+                onClick={() => {
+                  window.open(listGames.games[id].game_url, "_blank");
+                }}
+              >
+                Ver más
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    );
+  };
+
+  if (listGames.isLoading) return;
+  return (
+    <section className="text-gray-600 body-font bg-gray-300/30">
+      <div className="container px-5 py-7 mx-auto">
+        <h1 className="text-[30px] lg:text-[25px] xl:text-[30px] font-bold leading-tight mt-5 text-center pb-10 sm:mt-0 underline">
+          Videojuegos Disponibles
+        </h1>
+        <div className="flex flex-wrap -m-4">
+          {getGame(pagination)}
+          {getGame(pagination - 1)}
+          {getGame(pagination - 2)}
+          {getGame(pagination - 3)}
+          {getGame(pagination - 4)}
+          {getGame(pagination - 5)}
+        </div>
+        <div className="flex items-center justify-center my-4">
+          <div className="flex justify-center items-center ">
+            <div
+              className="border rounded-md bg-gray-100 px-2 py-1 text-3xl leading-6 text-slate-400 transition hover:bg-gray-200 hover:text-slate-500 cursor-pointer shadow-sm"
+              onClick={() => onChangePagination("left")}
+            >
+              &#60;
+            </div>
+            <div className="text-slate-500">
+              {page} / {Math.trunc(listGames.games.length / 6)}
+            </div>
+            <div
+              className="border rounded-md bg-gray-100 px-2 py-1 text-3xl leading-6 text-slate-400 transition hover:bg-gray-200 hover:text-slate-500 cursor-pointer shadow-sm"
+              onClick={() => onChangePagination("right")}
+            >
+              &#62;
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
