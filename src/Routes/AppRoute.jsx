@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { NavBar } from "../components/NavBar";
+import { Footer } from "../components/Footer";
 import { AboutRoutes } from "../pages/About/routes/AboutRoutes";
 import { HomeRoutes } from "../pages/Home/routes/HomeRoutes";
 import { ReservationsRoutes } from "../pages/Reservations/routes/ReservationsRoutes";
@@ -26,6 +27,7 @@ export const AppRoute = () => {
         <Route path="/login/*" element={<AuthenticationRoutes />}/>
         <Route path="/register/*" element={<RegisterRoutes />}/>
       </Routes>
+      <Footer />
     </>
   );
 };
