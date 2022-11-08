@@ -54,7 +54,7 @@ export const SectionGame = ({ listGames }) => {
                   window.open(listGames.games[id].game_url, "_blank");
                 }}
               >
-                Ver mas
+                Ver más
               </button>
             </div>
           </div>
@@ -68,7 +68,7 @@ export const SectionGame = ({ listGames }) => {
     <section className="text-gray-600 body-font bg-gray-300/30">
       <div className="container px-5 py-7 mx-auto">
         <h1 className="text-[30px] lg:text-[25px] xl:text-[30px] font-bold leading-tight mt-5 text-center pb-10 sm:mt-0 underline">
-          Videojuegos
+          Videojuegos Disponibles
         </h1>
         <div className="flex flex-wrap -m-4">
           {getGame(pagination)}
