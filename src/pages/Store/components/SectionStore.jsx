@@ -22,16 +22,16 @@ export const SectionStore = () => {
             <div className="lg:pt-28 p-6 md:w-1/3 sm:w-1/2">
                 <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                     <img className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/Funko.png" />
+                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/figura.jpg" />
                     <div className="p-6">
                          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                             Descripción
                         </h2>
                         <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                        Funko Pop
+                        Figuras Coleccionables
                         </h1>
                         <p className="leading-relaxed overflow-hidden">
-                        Funko diseña y vende coleccionables, accesorios y juguetes únicos de la cultura pop.
+                        Diferentes figuras de acción coleccionables que podrás encontrar en nuestro local.
                         </p>
                     </div>
                 </div>
@@ -40,16 +40,17 @@ export const SectionStore = () => {
             <div className="lg:pt-28 p-6 md:w-1/3 sm:w-1/2">
                 <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                     <img className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/Funko.png" />
+                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/llaveros.jpg" />
                     <div className="p-6">
                          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                             Descripción
                         </h2>
                         <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                        Funko Pop
+                        LLaveros
                         </h1>
                         <p className="leading-relaxed overflow-hidden">
-                        Funko diseña y vende coleccionables, accesorios y juguetes únicos de la cultura pop.
+                        Encuentra llaveros de diferentes formas y figuras, desde marcas de autos hasta
+                        todo tipo de anime y cómic.
                         </p>
                     </div>
                 </div>
@@ -58,16 +59,16 @@ export const SectionStore = () => {
             <div className="lg:pt-28 p-6 md:w-1/3 sm:w-1/2">
                 <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                     <img className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/Funko.png" />
+                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/mugs.png" />
                     <div className="p-6">
                          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                             Descripción
                         </h2>
                         <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                        Funko Pop
+                        Pocillos/Mug Personalizados
                         </h1>
                         <p className="leading-relaxed overflow-hidden">
-                        Funko diseña y vende coleccionables, accesorios y juguetes únicos de la cultura pop.
+                        Mugs personalizados con imagenes de tus super heroes favoritos y con frases motivadoras.
                         </p>
                     </div>
                 </div>
@@ -76,16 +77,16 @@ export const SectionStore = () => {
             <div className="lg:pt-28 p-6 md:w-1/3 sm:w-1/2">
                 <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                     <img className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/Funko.png" />
+                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/memorias.jpg" />
                     <div className="p-6">
                          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                             Descripción
                         </h2>
                         <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                        Funko Pop
+                        Memorias Flash Drive
                         </h1>
                         <p className="leading-relaxed overflow-hidden">
-                        Funko diseña y vende coleccionables, accesorios y juguetes únicos de la cultura pop.
+                        Memorias flash de diferentes motivos y de diferentes tamaños en espacio.
                         </p>
                     </div>
                 </div>
@@ -94,16 +95,16 @@ export const SectionStore = () => {
             <div className="lg:pt-28 p-6 md:w-1/3 sm:w-1/2">
                 <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                     <img className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/Funko.png" />
+                        src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/bolsasRegalo.jpg" />
                     <div className="p-6">
                          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                             Descripción
                         </h2>
                         <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                        Funko Pop
+                        Bolsas de regalo sorpresa
                         </h1>
                         <p className="leading-relaxed overflow-hidden">
-                        Funko diseña y vende coleccionables, accesorios y juguetes únicos de la cultura pop.
+                        Ven y encuentra bolsas de regalo con objetos sorpresa que serán de gran agrado para todas y todos
                         </p>
                     </div>
                 </div>
