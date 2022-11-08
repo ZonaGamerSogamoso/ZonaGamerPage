@@ -1,4 +1,28 @@
+import { useForm } from "../../../hooks/useForm";
+
 export const SectionReservation = () => {
+  const {
+    formState,
+    name,
+    email,
+    phone,
+    dateReservation,
+    message,
+    onInputChange,
+  } = useForm({
+    name: "",
+    email: "",
+    phone: "",
+    dateReservation: "",
+    message: "",
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log({ ...formState });
+    //Todo: envio de datos de la reservacion
+  };
+
   return (
     <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
       <div class="container mx-auto">
@@ -12,10 +36,7 @@ export const SectionReservation = () => {
             </p>
           </div>
           <div class="m-7">
-            <form
-              method="POST"
-              id="form"
-            >
+            <form id="form" onSubmit={onSubmit}>
               <div class="mb-6">
                 <label
                   for="name"
@@ -27,6 +48,8 @@ export const SectionReservation = () => {
                   type="text"
                   name="name"
                   id="name"
+                  onChange={onInputChange}
+                  value={name}
                   placeholder="Nombres y Apellidos"
                   required
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
@@ -43,6 +66,8 @@ export const SectionReservation = () => {
                   type="email"
                   name="email"
                   id="email"
+                  onChange={onInputChange}
+                  value={email}
                   placeholder="you@company.com"
                   required
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
@@ -59,6 +84,8 @@ export const SectionReservation = () => {
                   type="text"
                   name="phone"
                   id="phone"
+                  onChange={onInputChange}
+                  value={phone}
                   placeholder="3204586594"
                   required
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
@@ -75,6 +102,8 @@ export const SectionReservation = () => {
                   type="date"
                   name="dateReservation"
                   id="dateReservation"
+                  onChange={onInputChange}
+                  value={dateReservation}
                   placeholder="3204586594"
                   required
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
@@ -92,6 +121,8 @@ export const SectionReservation = () => {
                   rows="5"
                   name="message"
                   id="message"
+                  onChange={onInputChange}
+                  value={message}
                   placeholder="Your Message"
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   required
