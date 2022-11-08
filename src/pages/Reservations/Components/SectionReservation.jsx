@@ -4,10 +4,10 @@ export const SectionReservation = () => {
       <div class="container mx-auto">
         <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
           <div class="text-center">
-            <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
-              Reservaciones
+            <h1 class="my-3 text-3xl font-bold text-gray-700 dark:text-black-200">
+              Reservas
             </h1>
-            <p class="text-gray-400 dark:text-gray-400">
+            <p class="text-black-400 dark:text-black-400">
               Puedes hacer una reserva sencilla llenando los siguientes datos
             </p>
           </div>
@@ -19,7 +19,7 @@ export const SectionReservation = () => {
               <div class="mb-6">
                 <label
                   for="name"
-                  class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                  class="block mb-2 text-sm text-gray-600 dark:text-black-400 font-bold"
                 >
                   Nombre completo
                 </label>
@@ -35,9 +35,9 @@ export const SectionReservation = () => {
               <div class="mb-6">
                 <label
                   for="email"
-                  class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                  class="block mb-2 text-sm text-gray-600 dark:text-black-400 font-bold"
                 >
-                  Direccion de Correo
+                  Dirección de Correo
                 </label>
                 <input
                   type="email"
@@ -51,9 +51,9 @@ export const SectionReservation = () => {
               <div class="mb-6">
                 <label
                   for="phone"
-                  class="text-sm text-gray-600 dark:text-gray-400"
+                  class="text-sm text-gray-600 dark:text-black-400 font-bold"
                 >
-                  Numero de Telefono
+                  Número de Telefono
                 </label>
                 <input
                   type="text"
@@ -67,7 +67,7 @@ export const SectionReservation = () => {
               <div class="mb-6">
                 <label
                   for="dateReservation"
-                  class="text-sm text-gray-600 dark:text-gray-400"
+                  class="text-sm text-gray-600 dark:text-black-400 font-bold"
                 >
                   Fecha de reserva
                 </label>
@@ -83,7 +83,7 @@ export const SectionReservation = () => {
               <div class="mb-6">
                 <label
                   for="message"
-                  class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                  class="block mb-2 text-sm text-gray-600 dark:text-black-400 font-bold"
                 >
                   Mensaje adicional
                 </label>
