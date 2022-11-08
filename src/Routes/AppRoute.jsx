@@ -5,6 +5,9 @@ import { HomeRoutes } from "../pages/Home/routes/HomeRoutes";
 import { ReservationsRoutes } from "../pages/Reservations/routes/ReservationsRoutes";
 import { ServiceRoutes } from "../pages/Service/routes/ServiceRoutes";
 
+
+import { StoreRoutes } from "../pages/Store/routes/StoreRoutes";
+
 export const AppRoute = () => {
   return (
     <>
@@ -15,6 +18,7 @@ export const AppRoute = () => {
         <Route path="/about/*" element={<AboutRoutes />} />
         <Route path="/reservation/*" element={<ReservationsRoutes />} />
         <Route path="/service/*" element={<ServiceRoutes />} />
+        <Route path="/store/*" element={<StoreRoutes />} />
 
         {/* Auth Section */}
         {/* <Route path="/login" element={<LoginPage />}/>

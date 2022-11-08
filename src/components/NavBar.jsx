@@ -70,6 +70,16 @@ export const NavBar = (props) => {
                   Quienes somos
                 </NavLink>
               </li>
+              <li className="flex items-center">
+                <NavLink
+                  to="/store"
+                  className={(navData) =>
+                    navData.isActive ? "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold underline" : "hover:text-gray-600 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
+                >
+                  Tienda de regalos
+                </NavLink>
+              </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               {/* <li className="flex items-center">
