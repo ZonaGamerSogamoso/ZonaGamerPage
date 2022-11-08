@@ -5,6 +5,7 @@ export const RegistrationPage = () => {
         <React.Fragment>
             <div className="w-full max-w-md space-y-8 text-center my-3 text-3xl font-bold text-gray-700 dark:text-black-200">
                 Registro
+                <p></p>
                 <div>
                     <img
                     className="mx-auto h-12 w-auto"
@@ -25,7 +26,7 @@ export const RegistrationPage = () => {
                         type="text"
                         required
                         className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                        placeholder="Name"
+                        placeholder="Nombre"
                         />
                     </div>
                     <div>
@@ -39,7 +40,7 @@ export const RegistrationPage = () => {
                         autoComplete="email"
                         required
                         className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                        placeholder="Email address"
+                        placeholder="Correo"
                         />
                     </div>
                     <div>
@@ -53,7 +54,7 @@ export const RegistrationPage = () => {
                         autoComplete="current-password"
                         required
                         className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                        placeholder="Password"
+                        placeholder="Contraseña"
                         />
                     </div>
                     </div>
@@ -66,7 +67,7 @@ export const RegistrationPage = () => {
                         <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                         {/* <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" /> */}
                         </span>
-                        Sign Up
+                        Registrarse
                     </button>
                     </div>
                 </form>
