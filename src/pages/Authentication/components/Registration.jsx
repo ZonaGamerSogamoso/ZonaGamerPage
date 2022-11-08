@@ -3,11 +3,12 @@ import React from "react";
 export const RegistrationPage = () => {
     return (
         <React.Fragment>
-            <div className="w-full max-w-md space-y-8">
+            <div className="w-full max-w-md space-y-8 text-center my-3 text-3xl font-bold text-gray-700 dark:text-black-200">
+                Registro
                 <div>
                     <img
                     className="mx-auto h-12 w-auto"
-                    src="https://cdn-icons-png.flaticon.com/512/5260/5260498.png"
+                    src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/login.png"
                     alt="Your Company"
                     />
                 </div>
@@ -65,7 +66,7 @@ export const RegistrationPage = () => {
                         <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                         {/* <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" /> */}
                         </span>
-                        Sign in
+                        Sign Up
                     </button>
                     </div>
                 </form>

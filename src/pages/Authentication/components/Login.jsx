@@ -3,11 +3,12 @@ import React from "react";
 export const LoginPage = () => {
     return (
         <React.Fragment>
-            <div className="w-full max-w-md space-y-8">
+            <div className="w-full max-w-md space-y-8 text-center my-3 text-3xl font-bold text-gray-700 dark:text-black-200">
+                Inicio de Sesión
                 <div>
                     <img
                     className="mx-auto h-12 w-auto"
-                    src="https://cdn-icons-png.flaticon.com/512/5260/5260498.png"
+                    src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/login.png"
                     alt="Your Company"
                     />
                 </div>
