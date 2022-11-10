@@ -1,11 +1,48 @@
 import React from "react";
 
+// Styles
+import './Registration.styles.css';
+import { NavLink } from 'react-router-dom';
+  
+
 export const RegistrationPage = () => {
+    
+    // let history = useHistory()
+
+    // function handleClick() {
+    //     this.history.push("/profile/*")
+    // }
+
     return (
         <React.Fragment>
             <div className="w-full max-w-md space-y-8 text-center my-3 text-3xl font-bold text-gray-700 dark:text-black-200">
                 Registro
                 <p></p>
+                <div>
+                    <button
+                        type="submit"
+                        className="group relative flex w-full justify-center rounded-md border border-transparent  py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 button"
+                    >
+                        <img
+                            className="icon"
+                            src="https://assets.stickpng.com/images/5a951939c4ffc33e8c148af2.png"
+                            alt="icon"
+                        />
+                        Registro con Google
+                    </button>
+                    <button
+                        type="submit"
+                        className="group relative flex w-full justify-center rounded-md border border-transparent  py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 button"
+                    >
+                        <img
+                            className="icon"
+                            src="https://www.pngfind.com/pngs/m/159-1591413_facebook-logo-logos-de-marcas-facebook-iphone-app.png"
+                            alt="icon"
+                        />
+                        Registro con Facebook
+                    </button>
+                </div>
+                
                 <div>
                     <img
                     className="mx-auto h-12 w-auto"
@@ -60,18 +97,20 @@ export const RegistrationPage = () => {
                     </div>
 
                     <div>
-                    <button
-                        type="submit"
-                        className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >
-                        <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                        {/* <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" /> */}
-                        </span>
-                        Registrarse
-                    </button>
+                    
+                    <NavLink to="/profile">
+                        <button
+                            type="submit"
+                            className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                            // onClick={() => handleClick()}
+                        >
+                            Registrarse
+                        </button>
+                    </NavLink>
                     </div>
                 </form>
             </div>
         </React.Fragment>
     );
+
 }

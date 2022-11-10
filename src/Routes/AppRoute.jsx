@@ -7,6 +7,7 @@ import { ReservationsRoutes } from "../pages/Reservations/routes/ReservationsRou
 import { ServiceRoutes } from "../pages/Service/routes/ServiceRoutes";
 import { AuthenticationRoutes } from "../pages/Authentication/routes/AuthenticationRoutes";
 import { RegisterRoutes } from "../pages/Authentication/routes/RegisterRoutes";
+import { ProfileRoutes } from "../pages/Profile/routes/ProfileRoutes";
 
 
 import { StoreRoutes } from "../pages/Store/routes/StoreRoutes";
@@ -26,6 +27,7 @@ export const AppRoute = () => {
         {/* Auth Section */}
         <Route path="/login/*" element={<AuthenticationRoutes />}/>
         <Route path="/register/*" element={<RegisterRoutes />}/>
+        <Route path="/profile/*" element={<ProfileRoutes />}/>
       </Routes>
       <Footer />
     </>
