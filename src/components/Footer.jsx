@@ -4,7 +4,7 @@ export const Footer = (props) => {
             <div class="md:flex md:justify-evenly">
                 <div class="mb-6 md:mb-0">
                     <a href="/" class="flex items-center">
-                        <img src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/icon.jpeg" class="mr-3 h-8" alt="FlowBite Logo" />
+                        <img src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/icon.png" class="mr-3 h-8" alt="FlowBite Logo" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ZonaGamer</span>
                     </a>
                 </div>
