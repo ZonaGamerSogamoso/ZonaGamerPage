@@ -7,6 +7,31 @@ export const LoginPage = () => {
                 Inicio de Sesión
                 <p></p>
                 <div>
+                    <button
+                        type="submit"
+                        className="group relative flex w-full justify-center rounded-md border border-transparent  py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 button"
+                    >
+                        <img
+                            className="icon"
+                            src="https://assets.stickpng.com/images/5a951939c4ffc33e8c148af2.png"
+                            alt="icon"
+                        />
+                        Registro con Google
+                    </button>
+                    <button
+                        type="submit"
+                        className="group relative flex w-full justify-center rounded-md border border-transparent  py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 button"
+                    >
+                        <img
+                            className="icon"
+                            src="https://www.pngfind.com/pngs/m/159-1591413_facebook-logo-logos-de-marcas-facebook-iphone-app.png"
+                            alt="icon"
+                        />
+                        Registro con Facebook
+                    </button>
+                </div>
+                
+                <div>
                     <img
                     className="mx-auto h-12 w-auto"
                     src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/login.png"

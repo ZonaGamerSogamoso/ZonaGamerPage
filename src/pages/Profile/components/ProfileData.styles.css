@@ -1,0 +1,39 @@
+.content{
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.content-avatar{
+    margin-bottom: 10%;
+}
+
+.avatar{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/16/16363.png');
+    background-color: paleturquoise;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    max-width: 150px;
+    background-size: 100px;
+    margin: auto;
+}
+
+.icon{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.button{
+    color: grey;
+    border-color: grey;  
+    margin-top: 10%;  
+}
+
+.button:focus:active{
+    background-color: whitesmoke;
+}
+.button:hover{
+    background-color: azure;
+}
