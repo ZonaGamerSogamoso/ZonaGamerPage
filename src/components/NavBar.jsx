@@ -15,7 +15,6 @@ export const NavBar = (props) => {
               <img className="h-10 w-20"
                 src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/icon.jpeg" />
                 <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
-              ZonaGamer
               </h1>
             </Link>
             <button
