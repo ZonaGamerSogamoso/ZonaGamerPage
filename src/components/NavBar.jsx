@@ -12,7 +12,7 @@ export const NavBar = (props) => {
               to="/"
               className="text-gray-600 text-sm font-bold leading-relaxed inline-block mr-3 py-3 whitespace-nowrap uppercase"
             >
-              <img className="h-10 w-20"
+              <img className="h-20 w-20"
                 src="https://raw.githubusercontent.com/ZonaGamerSogamoso/ZonaGamerPage/main/src/assets/img/icon.png" />
                 <h1 className="my-3 text-1xl font-bold text-gray-700 dark:text-black-200">
               </h1>
