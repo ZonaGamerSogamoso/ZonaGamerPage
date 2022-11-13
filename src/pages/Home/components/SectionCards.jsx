@@ -52,7 +52,7 @@ export const SectionCards = () => {
             </div>
             <h6 className="text-xl font-semibold">Precios</h6>
             <p className="mt-2 mb-4 text-blueGray-500">
-              30 minutos: 1000$ <br />1 hora: 1500$
+              30 minutos: 1800$ <br />1 hora: 2800$
             </p>
           </div>
         </div>
